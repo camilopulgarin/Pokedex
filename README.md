@@ -1,4 +1,4 @@
-#Instalar dependencias
+# Instalar dependencias
 
 Para que el proyecto funcione correctamente debe instalar las dependecias con el siguiente comando:
 
