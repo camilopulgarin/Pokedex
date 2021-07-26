@@ -1,0 +1,58 @@
+
+.DimensionesPok{
+    display:flex;
+    top:50px;
+    padding:0px;
+    left:5vw;
+    flex-wrap:wrap;
+    width:47vw;
+    position: fixed;
+    overflow:scroll; 
+    height:90vh;
+    overflow-x: hidden
+    
+}
+
+.DimensionesCard{
+    display:flex;
+    top:50px;
+    left:56vw;
+    position:fixed;
+    width:45vw
+}
+
+.imgCard{
+    height: 200px;
+}
+
+@media only screen and (max-width: 550px) {
+
+    .DimensionesPok{
+        display:flex;
+        top:321px;
+        padding:0px;
+        left:3vw;
+        flex-wrap:wrap;
+        width:100vw;
+        position: absolute;
+        overflow:scroll; 
+        height:60vh;
+        overflow-x: hidden;
+        justify-content: space-around;
+        
+    }
+    
+    .DimensionesCard{
+        display:flex;
+        top:10px;
+        left:0;
+        position:absolute;
+        width:100vw;
+        justify-content: space-around;
+    }
+
+    .imgCard{
+        height: 124px;
+    }
+
+}

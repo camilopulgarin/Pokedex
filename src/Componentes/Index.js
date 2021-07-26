@@ -1,11 +1,7 @@
-//Zona de importacion de componentes externos.
-import React, { useRef, useEffect, useState } from 'react'
-//import { Scroll } from 'scroll-utility'
+
+import React, {useEffect, useState } from 'react'
 import axios from 'axios'
-
-import { Link } from 'react-router-dom';
-
-//import './static/css/Index.css'
+import './static/Index.css'
 
 
                                 
@@ -52,29 +48,28 @@ function Index() {
     return(
         <div className="container">
         <div className="row">
-            <div className="" style={{display:"flex", top:"50px", padding:"0px", left:"5vw", flexWrap:"wrap", width:"47vw", position: "fixed", overflow:"scroll", height:"90vh", overflowX: "hidden"}}>
-               
-                    <div class="row g-2">
+            <div className="DimensionesPok">
+                    
                     {   
                         ListPokemons.map((pokemon =>
                         <div key={pokemon.name} class="col-4" style={{height:"100px", width:"100px", margin:"10px"}} onClick = {() => Pokemonsview(codigoPokemon(pokemon.url))}>
-                            <img style={{width:"100px",height:"100px"}} className=" border bg-light" src={"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/"+ codigoPokemon(pokemon.url)+".svg"} />
+                            <img style={{width:"100px",height:"100px"}} 
+                                 className=" border bg-light" 
+                                 src={"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/"+ 
+                                 codigoPokemon(pokemon.url)+".svg"} />
                         </div>
                     
                     
                     ))}
-                        
-                    </div>
-                
             </div>
-            <div className="" style={{display:"flex", top:"50px", left:"56vw", position:"fixed", width:"45vw"}}>
-                <div class="card" style={{width: "18rem"}}>
-                        <img style={{height:"200px"}} src={"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/"+ PokemonSelect.pokemon+".svg"} class="card-img-top" alt="..." />
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">ID: {PokemonSelect.pokemon}</li>
-                            <li class="list-group-item">Name: {PokemonSelect.name}</li>
-                            <li class="list-group-item">Type: {PokemonSelect.type}</li>
-                            <li class="list-group-item">Ability: {PokemonSelect.ability}</li>
+            <div className="DimensionesCard">
+                <div className="card" style={{width: "18rem"}}>
+                        <img className="imgCard" src={"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/"+ PokemonSelect.pokemon+".svg"} alt="..." />
+                        <ul className="list-group list-group-flush">
+                            <li className="list-group-item">ID: {PokemonSelect.pokemon}</li>
+                            <li className="list-group-item">Name: {PokemonSelect.name}</li>
+                            <li className="list-group-item">Type: {PokemonSelect.type}</li>
+                            <li className="list-group-item">Ability: {PokemonSelect.ability}</li>
                         </ul>
                 </div>
             </div>
